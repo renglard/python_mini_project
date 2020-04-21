@@ -23,10 +23,9 @@ class FileHandler:
     def append_to_csv(self, file_name, data):
 
         try:
-
             self.open_csv_file(file_name)
             for row in self.handler_data:
-                if row.get("user_id") == data[0]:
+                if row.get("id") == data[0]:
                     raise Exception("This ID already exists")
 
             with open(file_name, 'a+', newline='') as write_obj:
@@ -56,11 +55,11 @@ class FileHandler:
 
 added_input = ['4', 'lexus', 'ramon', '4', 'dd', '10']
 
-# my_file = FileHandler()
+my_file = FileHandler()
 #
 # my_file.open_csv_file("/Users/rommienglard/PycharmProjects/week2/python_mini_project/car_lot/vehicle.csv")
 #
-# my_file.append_to_csv("/Users/rommienglard/PycharmProjects/week2/python_mini_project/car_lot/vehicle.csv", added_input)
+my_file.append_to_csv("/Users/rommienglard/PycharmProjects/week2/python_mini_project/car_lot/vehicle.csv", added_input)
 
 
 

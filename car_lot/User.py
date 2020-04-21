@@ -33,7 +33,6 @@ print(user_list)
 
 name = input("Enter your first and last name: ").lower()
 password = input("enter your password: ").lower()
-
 user = Users(name, user_list, password)
 pass_dictionary = user.dict_names()
 print(pass_dictionary)
