@@ -13,3 +13,9 @@ id,first_name,last_name,password,position,salary,role
 12,amira,bernsdtein,12345678,teacher,10,teacher
 13,amira,bernsdtein,12345678,teacher,10,teacher
 14,john,doe,123,stripper,10,stripper
+
+
+id,brand,owner,last_test,color,door_count
+1,mitsubishi,amir,1,k,4
+2,toyota,amir,2,p,5
+3,subaru,hen,3,tt,8

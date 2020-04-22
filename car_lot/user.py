@@ -1,6 +1,6 @@
-import Logger
+import logger
 import definitions
-import FileHandler
+import file_handler
 
 
 class Users:
@@ -13,7 +13,9 @@ class Users:
     def dict_names(self):
         pass_dictionary = {}
         for users in self.user_list:
+            #add new key/value to empty pass_dectionary
             pass_dictionary[users['first_name'] + " " + users['last_name']] = [users['password'], users['role']]
+        print(pass_dictionary)
         return pass_dictionary
 
     def does_exist(self, pass_dict):
@@ -27,8 +29,9 @@ class Users:
             print(err)
 
 
-data = FileHandler.FileHandler()
+data = file_handler.FileHandler()
 user_list = data.open_csv_file("/Users/rommienglard/PycharmProjects/week2/python_mini_project/car_lot/user.csv")
+
 print(user_list)
 
 name = input("Enter your first and last name: ").lower()
